@@ -1,0 +1,117 @@
+function CheckInput(){
+  let nomutilvalue = nomutil.value.trim();
+ let nomvalue = nom.value.trim();
+ let prenomvalue = prenom.value.trim();
+ const emailvalue = email.value.trim();
+ const passwordvalue = password.value.trim();
+ const password2value = password2.value.trim();
+ const datevalue = date.value.trim()
+
+ nomutilvalue=nomutilvalue.toString().toLowerCase()
+  nomvalue =nomvalue.toString()
+  prenomvalue =prenomvalue.toString()
+
+
+  if (nomutilvalue ===''){
+
+    setError(nomutil,'vous devez remplir le champ')
+ }else if( (nomutilvalue ==='root')|| (nomutilvalue ==='afpa') ||(nomutilvalue ==='deus')||(nomutilvalue ==='Root'))
+  
+ {
+  setError(nomutil,'Ce nom n\' est pas accepté')
+  
+
+  }
+ else  {
+
+   setSuccess(nomutil)
+
+ }
+
+  // ******nom****
+ if (nomvalue ===''){
+
+    setError(nom,'vous devez remplir le champ')
+ }else if (isNom(nomvalue)){
+  setError(nom,'le nom ne doit pas contenir un chiffre')
+  
+
+  }
+ else  {
+
+   setSuccess(nom)
+
+ }
+ //****prenom */
+ if (prenomvalue ===''){
+
+    setError(prenom,'vous devez remplir le champ')
+ }else if (isPrenom(prenomvalue)){
+  setError(prenom,'le nom ne doit pas contenir un chiffre')
+  
+
+  }
+ 
+ else {
+
+   setSuccess(prenom)
+
+ }
+ //****date */
+ if (datevalue ===''){
+
+    setError(date,'vous devez remplir le champ')
+    
+ }else  {
+
+
+   checkDate(datevalue)
+
+ }
+ //****email */
+ if (emailvalue ===''){
+
+    setError(email,'vous devez remplir le champ')
+   
+    
+ }else if (!isEmail(emailvalue)){
+    setError(email,'vous devez remplir correctement')
+
+    }else if (acceptEmail(emailvalue)){
+
+      setError(email,'cet email n\' est pas accepté')
+    }
+    
+    else {
+   setSuccess(email)
+ }
+ //***password */
+ if (passwordvalue ===''){
+
+    setError(password,'vous devez remplir le champ')
+    
+ }else if(!passValid(passwordvalue)){
+
+  setError(password,'doit contenir minimum huit caractères, au moins une lettre majuscule, une lettre minuscule, un chiffre et un caractère spécial')
+ }
+ 
+ else {
+
+   setSuccess(password)
+ }
+ //****password2 */
+ if (password2value ===''){
+
+    setError(password2,'vous devez remplir le champ')
+    
+ }else if (passwordvalue !==password2value){
+
+    setError(password2,'mont de pass incorrect')
+
+ }else{
+   setSuccess(password2)
+
+ }
+
+
+}

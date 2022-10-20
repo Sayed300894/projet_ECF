@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <title>Document</title>
+    </head>
+    <body>
+            <!-- Start NavBar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-info sticky-lg-top">
+        <div class="container-fluid">
+          <a class="navbar-brand w-25 text-end" href="#"><img class="image-logo" src="images/nom-stella-de-fleurs-85442907-removebg-preview(1).png" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse flex-grow-0 w-75 navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto ms-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a class="nav-link active dropdown-toggle text-white fs-5" aria-current="page" href="#"  id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">NOS PRODUITS</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a href="http://127.0.0.1:5500/index.html#roses" class="dropdown-item fs-5">BOUQUETS DE ROSES</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item fs-5" href="http://127.0.0.1:5500/index.html#plant">PLANTES</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item fs-5" href="http://127.0.0.1:5500/index.html#orchidée">ORCHIDÉE</a></li>
+                  </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white fs-5" href="#"  id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">PAR OCCASION</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item fs-5" href="http://127.0.0.1:5500/index.html#aniversaire">ANNIVERSAIRE</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item fs-5" href="http://127.0.0.1:5500/index.html#amour">AMOUR</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item fs-5" href="http://127.0.0.1:5500/index.html#mariage">MARIAGE</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item fs-5" href="http://127.0.0.1:5500/index.html#remerci">REMERCIEMENTS</a></li>
+                  </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white fs-5" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                PAR PRIX
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item fs-5" href="http://127.0.0.1:5500/index.html#roses">Moin de 30£</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item fs-5" href="http://127.0.0.1:5500/index.html#aniversaire">De 30£ à 35£</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item fs-5" href="http://127.0.0.1:5500/index.html#orchidée">Plus de 35£</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white fs-5" href="http://127.0.0.1:5500/test.html">CONTACT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white fs-5">PANIER/0.00£<svg xmlns="http://www.w3.org/2000/svg" width="25" height="30" fill="currentColor" class="bi bi-bag-heart-fill ms-2 pb-2" viewBox="0 0 16 16">
+                    <path d="M11.5 4v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5ZM8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1Zm0 6.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132Z"/>
+                  </svg></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+       <!-- End NavBar -->
+      <div class="form-header"><h1 id="title" class="pt-5">Créer un Compte</h1></div>
+        
+  <form id="form" class="form">
+    <div class="form-control">
+        <label for="nomutil">Nom Utilisateur</label>
+        <input type="text" id="nomutil" placeholder="Nom utilisateur"  maxlength="15"  >
+        <i class="fas fa-check-circle"></i>
+        <i class="fas fa-exclamation"></i>
+        <small>Error message</small>
+    </div>
+    <div class="form-control">
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" placeholder="Nom" minlength="3" maxlength="15"  >
+        <i class="fas fa-check-circle"></i>
+        <i class="fas fa-exclamation"></i>
+        <small>Error message</small>
+    </div>
+    <div class="form-control">
+        <label for="nom">Prénom</label>
+        <input type="text" id="prenom" placeholder="Prenom" 
+        minlength="3" maxlength="15"  >
+        <i class="fas fa-check-circle"></i>
+        <i class="fas fa-exclamation"></i>
+        <small>Error message</small>
+    </div>
+    <div class="form-control">
+        <label for="nom">Date de naissance</label>
+        <input type="date" id="date" placeholder=""  >
+        <i class="fas fa-check-circle"></i>
+        <i class="fas fa-exclamation"></i>
+        <small>Error message</small>
+    </div>
+      <div class="form-control">
+        <label for="nom">Sexe</label>
+
+     <select name="sexe" id="sexe"> 
+
+        <option value="homme">Homme</option>
+        <option value="femme">Femme</option>
+     </select>
+    </div>
+            <div class="form-control">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Email">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation"></i>
+                <small>
+                    Error message</small>
+            </div>
+    <div class="form-control">
+        <label for="password">Password</label>
+        <input class="password" type="password" id="password" placeholder="Password">
+        <i class="fas fa-check-circle"></i>
+        <i class="fas fa-exclamation"></i>
+        <small>Error message</small>
+    </div>
+    <div class="form-control">
+        <label for="password">confirmer Password</label>
+        <input type="password" id="con-password" placeholder="Password">
+        <i class="fas fa-check-circle"></i>
+        <i class="fas fa-exclamation"></i>
+        <small>
+            Error message</small>
+    </div>
+   
+ 
+    <button class="button" id="btn-2" type="submit">Envoyer</button>
+    </form>
+            <!-- footer -->
+            <section>
+                <div class="container-fluid text-start bg-secondary w-100  pb-4">
+                  <div class="row justify-content-center">
+                    <div class="col-lg-2 col-md-4 mb-md-5 w-24 me-1 mt-4 mb-sm-4">
+                      <h2 class="text-white fs-5">NOS SERVICES</h2>
+                      <div class="tx-div mt-3 mb-3"></div>
+                     <p><a class="text-white fs-5" href="#">Suivi de commande</a></p>
+                      <p><a class="text-white fs-5" href="#">Nous contacter</a></p>
+                      <p><a class="text-white fs-5" href="#">Paiement sécurisé</a></p>
+                      <div class="tx-div mt-3 mb-3"></div>
+                      <h2 class="text-white fs-4">Suivez Nous</h2>
+                      <div class="tx-div mt-3 mb-3"></div>
+                      <div class="social-icon">
+                      <div class="social-item">
+                        <a href="#">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZpZXdCb3g9IjAgMCAxNzIgMTcyIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9Im5vbnplcm8iIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtbGluZWNhcD0iYnV0dCIgc3Ryb2tlLWxpbmVqb2luPSJtaXRlciIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBzdHJva2UtZGFzaGFycmF5PSIiIHN0cm9rZS1kYXNob2Zmc2V0PSIwIiBmb250LWZhbWlseT0ibm9uZSIgZm9udC13ZWlnaHQ9Im5vbmUiIGZvbnQtc2l6ZT0ibm9uZSIgdGV4dC1hbmNob3I9Im5vbmUiIHN0eWxlPSJtaXgtYmxlbmQtbW9kZTogbm9ybWFsIj48cGF0aCBkPSJNMCwxNzJ2LTE3MmgxNzJ2MTcyeiIgZmlsbD0ibm9uZSI+PC9wYXRoPjxwYXRoIGQ9Ik04NiwxNTguMjRjLTM5Ljg5NzA1LDAgLTcyLjI0LC0zMi4zNDI5NSAtNzIuMjQsLTcyLjI0djBjMCwtMzkuODk3MDUgMzIuMzQyOTUsLTcyLjI0IDcyLjI0LC03Mi4yNGgwYzM5Ljg5NzA1LDAgNzIuMjQsMzIuMzQyOTUgNzIuMjQsNzIuMjR2MGMwLDM5Ljg5NzA1IC0zMi4zNDI5NSw3Mi4yNCAtNzIuMjQsNzIuMjR6IiBmaWxsPSIjZWNmMGYxIj48L3BhdGg+PGc+PHBhdGggZD0iTTg2LDQ1LjgzMDgzYy0yMi4xODQ4MiwwIC00MC4xNjkxNywxNy45ODQzNSAtNDAuMTY5MTcsNDAuMTY5MTdjMCwyMi4xODQ4MiAxNy45ODQzNSw0MC4xNjkxNyA0MC4xNjkxNyw0MC4xNjkxN2MyMi4xODQ4MiwwIDQwLjE2OTE3LC0xNy45ODQzNSA0MC4xNjkxNywtNDAuMTY5MTdjMCwtMjIuMTg0ODIgLTE3Ljk4NDM1LC00MC4xNjkxNyAtNDAuMTY5MTcsLTQwLjE2OTE3eiIgZmlsbD0iIzAzOWJlNSI+PC9wYXRoPjxwYXRoIGQ9Ik05MS40Mzc2NCw5Ni42NDY5NGgxMC4zOTUzNmwxLjYzMjE0LC0xMC41NjAyNmgtMTIuMDI5NjF2LTUuNzcxNjhjMCwtNC4zODY5IDEuNDMzNCwtOC4yNzY5NiA1LjUzNywtOC4yNzY5Nmg2LjU5NDA5di05LjIxNTY1Yy0xLjE1ODU2LC0wLjE1NjQ1IC0zLjYwODg4LC0wLjQ5ODk0IC04LjIzODkxLC0wLjQ5ODk0Yy05LjY2ODA4LDAgLTE1LjMzNjE2LDUuMTA1NzEgLTE1LjMzNjE2LDE2LjczNzg2djcuMDI1MzhoLTkuOTM4N3YxMC41NjAyNmg5LjkzODd2MjkuMDI1MzljMS45NjgyOSwwLjI5NTk4IDMuOTYxOTUsMC40OTY4MyA2LjAwODQ2LDAuNDk2ODNjMS44NDk5LDAgMy42NTUzOSwtMC4xNjkxMyA1LjQzNzY0LC0wLjQxMDE1eiIgZmlsbD0iI2ZmZmZmZiI+PC9wYXRoPjwvZz48L2c+PC9zdmc+" alt=""></a>
+                       </div>
+                       <div class="social-item">
+                         <a href="#">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAC4ElEQVRoge2YT0hUQRzHP/PyX1rmJgbSqhhBB7sVGFFRFIR06GKH6GTdN7p4ibAg6hKRREiUBWFFdYkIi7oESZkgXYQoqGjdg6fN1t6qqPvr4Jrre7P5dmffpvA+MPD4zcxvft/9zc6b94OAgICAgIBVjPI6UA5SyzRhoBFFE9AAbAZC6VaTbhXpKWsznqeAyYznn8B4usURYljESBEFoswxqt4TNxIgYLGXUwjHUbQClV7FFogkwgcUD3hLrwLRDdIKkBbK2Mgz4LCvIXpF8QKbo2qYGWeXpZ0Q4hIrJXgAoY1KLuq6XBmQ/VQwxxiwwffAciNBkno1TDLT6M7ALLtYecEDVLOOVqdRt4W2FCGY/Eix1WnSCWguQij54kmAWQauvobmFiMXWREvAhRho0V2HoLejxDphqoC/5Us94+ry8B644VKSqE9Ao++QvtpsPSndR7UOQ06z1WFWo3qWohcg5tDsH23uT+hThxHv24LFU7AAtt2wI0BuPAYNjWYeCqjjbJMg1uA+CAAQCk4cAz6PkHHeSgtz89PnCUT/d1COiqqoKML7o3MC8qVNX9vuEC2u1AxEIHpyeXHObGWXuhKNENs5u/1/jBlw8Mr0HcZZqZznS3Uk8g0uAUobMQHASLwqg96OiE+lq+X3+oJc5kGtwDBztd7Vj4PQ3cERt6ZevrlNGTbQoUhPgZ3uuD5bUilzP0J406TTsCE8UKzM/C0B3rPgZ1YfrxXlJcMCDHvn/oaBvvh+hkY/WLgJAvCD6dJl4FvRot0HjGavgyu2HTvge9+RmCIKzadALMM+IuHDJQwiOa4WgEkmGTIaXQJUG+YAm4VJaRcUPQ4KxKQ7S4U5yzw0u+YcqAfm3O6jn+VFhX7OEmKE/+ttAiDCPcZ4G5OpUUdsocQFmFSNKEIowgjNKKoIUUNEEJRzeInaTmLopPAws1tIt0yC7yjCDEgiiLKLDGvxd2AgICAgIBVzR8UibLdyBYx4AAAAABJRU5ErkJggg=="/></a>
+                       </div>
+                       <div class="social-item">
+                         <a href="#">
+                      <img src="data:image/png;base64,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"/></a>
+                       </div>
+                    </div>
+                  </div>
+                    <div class="col-lg-2 col-md-4 mb-md-5 w-24 mt-4 mb-sm-4">
+                      <h2 class="text-white fs-5">MOYENS DE PAIEMENTS</h2>
+                      <div class="tx-div mt-3 mb-3"></div>
+                      <a href="#"><img src="https://www.foliflora.fr/static/img/moyenspaiements.png" alt=""></a>
+                      <div class="tx-div mt-3 mb-3"></div>
+                      <h2 class="text-white fs-5">RECOMMANDÉ PAR</h2>
+                      <div class="tx-div mt-3 mb-3"></div>
+                      <img src="https://www.foliflora.fr/static/img/mariec.png" alt="">
+                    </div>
+                    <div class="col-lg-2 col-md-4 mb-md-5 w-24 mt-4 mb-sm-4">
+                      <h2 class="text-white fs-5">LES ÉVÈNEMENTS</h2>
+                      <div class="tx-div mt-3 mb-3"></div>
+                      <p class="text-white fs-5" >Saint-Valentin : 14 Février 2022
+                        Fête des Grand-Mères : 06 Mars 2022
+                        Journée de la femme : 08 Mars 2022
+                        Fête des Mères : 29 Mai 2022
+                        Fête des Pères : 19 Juin 2021
+                        Noël : 25 Décembre 2022
+                        Jour de l'an : 01 Janvier 2023</p>
+                        <div class="tx-div mt-3 mb-3"></div>
+                        <h2 class="text-white fs-5">LES GRANDES VILLES</h2>
+                        <div class="tx-div mt-3 mb-3"></div>
+                        <p class="text-white fs-5">Paris, Lyon, Marseille
+                          Lille, Bordeaux, Strasbourg
+                          Montpellier, Nantes, Nice
+                          Foliflora, la livraison de fleurs partout en France</p>
+                    </div>
+                    <div class="col-lg-2 col-md-4 mb-md-5 w-24 mt-4 mb-sm-4">
+                      <h2 class="text-white fs-5">NEWSLETTER</h2>
+                      <div class="tx-div mt-3 mb-3"></div>
+                      <p class="text-white fs-5">Inscrivez-vous à la newsletter Foliflora et recevez un chèque cadeau de 5€ à valoir sur votre prochaine commande*</p>
+                      <input type="email" class="border ps-2" value="Mon Adresse Mail">
+                      <br>
+                      <button class="btn btn-color-1 mt-3"><a href="#">M'INSCRIRE</a></button>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section>
+                <div class="bg-dark mb-0">
+                  <p class="text-white text-center pb-4 pt-2 mb-0 fs-5">Copyright 2022 © Stella, livraison de fleurs - Une marque de Flora Group - Tous droits réservés - Conditions Générales de Vente - Mentions légales</p>
+                </div>
+              </section>
+              <!-- End footer -->
+             
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/a6e90968a5.js" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+    </body>
+</html>

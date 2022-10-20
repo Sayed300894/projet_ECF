@@ -1,0 +1,222 @@
+let form =document.querySelector('#form')
+let nomutil = document.querySelector('#nomutil')
+let nom = document.querySelector('#nom')
+let prenom = document.querySelector('#prenom')
+let date = document.querySelector('#date')
+let button = document.querySelector('#btn-2')
+let email = document.querySelector('#email')
+let password = document.querySelector('#password')
+let password2 = document.querySelector('#con-password')
+
+form.addEventListener('submit',function(e){
+     e.preventDefault()
+     CheckInput()
+})
+button.addEventListener('click' ,function(){
+
+  this.style.backgroundColor= 'red';
+})
+
+function CheckInput(){
+  let nomutilvalue = nomutil.value.trim();
+ let nomvalue = nom.value.trim();
+ let prenomvalue = prenom.value.trim();
+ const emailvalue = email.value.trim();
+ const passwordvalue = password.value.trim();
+ const password2value = password2.value.trim();
+ const datevalue = date.value.trim()
+
+ nomutilvalue=nomutilvalue.toString().toLowerCase()
+  nomvalue =nomvalue.toString()
+  prenomvalue =prenomvalue.toString()
+
+
+  if (nomutilvalue ===''){
+
+    setError(nomutil,'vous devez remplir le champ')
+ }else if( (nomutilvalue ==='root')|| (nomutilvalue ==='afpa') ||(nomutilvalue ==='deus')||(nomutilvalue ==='Root'))
+  
+ {
+  setError(nomutil,'Ce nom n\' est pas accepté')
+  
+
+  }
+ else  {
+
+   setSuccess(nomutil)
+
+ }
+
+  // ******nom****
+ if (nomvalue ===''){
+
+    setError(nom,'vous devez remplir le champ')
+ }else if (isNom(nomvalue)){
+  setError(nom,'le nom ne doit pas contenir un chiffre')
+  
+
+  }
+ else  {
+
+   setSuccess(nom)
+
+ }
+ //****prenom */
+ if (prenomvalue ===''){
+
+    setError(prenom,'vous devez remplir le champ')
+ }else if (isPrenom(prenomvalue)){
+  setError(prenom,'le nom ne doit pas contenir un chiffre')
+  
+
+  }
+ 
+ else {
+
+   setSuccess(prenom)
+
+ }
+ //****date */
+ if (datevalue ===''){
+
+    setError(date,'vous devez remplir le champ')
+    
+ }else  {
+
+
+   checkDate(datevalue)
+
+ }
+ //****email */
+ if (emailvalue ===''){
+
+    setError(email,'vous devez remplir le champ')
+   
+    
+ }else if (!isEmail(emailvalue)){
+    setError(email,'vous devez remplir correctement')
+
+    }else if (acceptEmail(emailvalue)){
+
+      setError(email,'cet email n\' est pas accepté')
+    }
+    
+    else {
+   setSuccess(email)
+ }
+ //***password */
+ if (passwordvalue ===''){
+
+    setError(password,'vous devez remplir le champ')
+    
+ }else if(!passValid(passwordvalue)){
+
+  setError(password,'doit contenir minimum huit caractères, au moins une lettre majuscule, une lettre minuscule, un chiffre et un caractère spécial')
+ }
+ 
+ else {
+
+   setSuccess(password)
+ }
+ //****password2 */
+ if (password2value ===''){
+
+    setError(password2,'vous devez remplir le champ')
+    
+ }else if (passwordvalue !==password2value){
+
+    setError(password2,'mont de pass incorrect')
+
+ }else{
+   setSuccess(password2)
+
+ }
+
+
+}
+
+function setError(input,message){
+
+    const formcontrol = input.parentElement;  // recuperer le prarent 
+    const small =formcontrol.querySelector('small')// ciblé le message
+    small.innerText= message
+    formcontrol.classList.remove('success')
+    
+    formcontrol.classList.add('error')
+      
+}
+
+
+function setSuccess(input){
+    const formcontrol = input.parentElement; 
+    formcontrol.classList.remove('error')
+    
+    formcontrol.classList.add('success')
+  
+    
+}
+
+function isEmail(email){
+      return /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email) 
+}
+
+function acceptEmail(email){
+
+  return /root@afpa.fr|afpa@afpa.com|deus@afpa.org/i.test(email)
+}
+
+function isNom(nom){
+
+  return /([0-9])/.test(nom)
+}
+function isPrenom(prenom){
+
+  return /([0-9])/.test(prenom)
+ 
+}
+
+function passValid(password){
+
+  return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(password)
+}
+
+function checkDate(input){
+
+let newDate = new Date()
+let nowyear = newDate.getFullYear()
+let nowmonth= newDate.getMonth()+1;
+let nowday = newDate.getDate()
+
+  let dateBird = input.split('-')
+  let dateBirdYear = dateBird[0]
+  let dateBirdMonth = dateBird[1]
+  let dateBirdDay = dateBird[2]
+
+  let difYear = nowyear-dateBirdYear
+  let difMonth = nowmonth - dateBirdMonth
+  let difDay = nowday-dateBirdDay
+  
+  if (difYear>21) {
+
+   setSuccess(date)
+   
+
+
+  }else if( difYear == 21 && ((difMonth >0) || (difMonth==0 && difDay>=0)) ){
+
+    setSuccess(date)
+
+  }else{
+
+    setError(date,`vous n'avez pas 21 ans`)
+   
+  }
+
+}
+
+
+
+
+
+
+

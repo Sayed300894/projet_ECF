@@ -1,0 +1,231 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container-2{
+
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    max-width: 800px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    margin-top: 60px;
+    margin-bottom: 60px;
+    overflow: hidden;
+}
+.header{
+
+    background: rgb(41, 61, 113);
+    padding: 20px 40px;
+    color: white;
+    border-bottom: 1px solid grey;   
+}
+.head{
+    margin: 0;
+    color:white;
+    font-weight: 700;
+}
+.form{
+    padding: 30px 40px;
+    background: rgb(254, 252, 252);
+}
+.form-control{
+  position: relative;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+
+}
+.form-control label{
+
+    display: inline-block;
+    margin-bottom: 5px;
+}
+.form-control input, .form-control select{
+   border-radius: 3px;
+   /* border: 2px solid grey; */
+   border: transparent;
+   border-bottom:2px solid #000b30;
+   background-color: rgb(251, 253, 253);
+   display: block;
+   padding: 10px;
+   width: 100%;
+   outline: transparent;
+   font-family: inherit;
+
+}
+.form-control .password{
+
+margin-bottom:40px ;
+}
+.form-control i{
+
+    position: absolute;
+    top: 37px;
+    left: 300px;
+    visibility: hidden;
+    
+}
+.form-control i.fa-exclamation{
+
+    position: absolute;
+    top: 37px;
+    left: 325px;
+    
+}
+.form-control small{
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    visibility: hidden;
+}
+.form .button{
+
+    background:rgb(69, 7, 57) ;
+    width: 100%;
+    padding: 5px;
+    margin: 10px 0;
+    border: 1px solid #000b30;
+    border-radius: 25px;
+    font-size: inherit;
+    font-family: inherit;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 0 0  0 #000b307f;
+    animation: shadow 1.3s infinite;
+
+}
+
+.form-control.success input{
+
+border: 1px solid rgb(20, 100, 20);
+
+}
+.form-control.error input{
+
+    border: 1px solid rgb(163, 38, 7);
+    animation: animation 0.5s;
+
+    
+    }
+
+    .form-control.success i.fa-check-circle{
+
+        color: rgb(20, 100, 20);
+        visibility: visible;
+        
+        }
+        .form-control.error i.fa-exclamation{
+
+     color: rgb(163, 38, 7);
+      visibility: visible;
+            
+         }
+         .form-control.error small{
+
+            color: rgb(163, 38, 7);
+             visibility: visible;
+             transition: all 0.3s;
+                   
+                }
+         @keyframes animation {
+
+             0%{
+                  transform: translateX(8px);
+                 }
+             50%{
+                transform: translateX(-8px);
+                }
+            100%{
+             transform:translateX(0);
+         }
+                       
+         }    
+                   
+     @keyframes shadow {
+            
+        to {
+            
+        box-shadow: 0 0 0  12px #000b3017;
+            
+     }
+            
+ }
+a{
+    text-decoration: none;
+    color: #627f9a;
+}
+a:hover{
+    color: black;
+}
+.image-logo{
+    width: 250px;
+    height: 20%;
+
+}
+.section-1{
+    background-image: url(https://fleuriste-levictorien.fr/charte/1.jpg);
+    width: 100%;
+}
+span{
+    color: red;
+}
+
+.texteSection{
+    position: relative;
+    left: 65%;
+    transform: translateX(-50%);
+}
+.icon-2{
+    width: 50px;
+    height: 50px;
+}
+.tx-div{
+    border: #ababab;
+    width: 40px;
+    height: 3px;
+    background-color: rgb(150, 150, 150);
+}
+.social-icon{
+    display: flex;
+    margin-bottom: 30px;
+}
+.social-item{
+    width: 50px;
+    height: 50px;
+    margin: 0 5px;
+}
+.social-item img{
+    filter: grayscale(1);
+    transition: .3s ease filter;
+}
+.social-item:hover img{
+    filter: grayscale(0);
+}
+
+.btn-color-1{
+    background-color: rgb(69, 7, 57);
+}
+
+  #title{
+    text-align: center;
+    font-family: verdana;
+  }
+  .form-header{
+      background-color: #000b30;
+     margin: 50px auto;
+     margin-bottom: 0px;
+      border: 3px solid rgb(0, 0, 0);
+      max-width:800px;
+      height: 150px;
+      color: white;
+  }
+  .form{
+    background-color: #0dcaf0;
+    max-width: 800px;
+    margin: 50px auto;
+    margin-top: 0px;
+    padding: 30px 20px;
+    box-shadow: 5pw 10px 15px rgba(0, 0, 0, 0.5), 3px 5px 5px rgba(0, 0, 0, 0.11);
+  }
+
